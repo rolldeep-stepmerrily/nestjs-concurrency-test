@@ -4,7 +4,7 @@ import { Worker } from 'worker_threads';
 
 @Injectable()
 export class AppService {
-  private computation(iterations: number): number {
+  computation(iterations: number): number {
     return Array.from({ length: iterations }, (_, i) => Math.sqrt(i)).reduce(
       (acc: number, cur: number) => acc + cur,
       0,
