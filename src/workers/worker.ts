@@ -6,5 +6,6 @@ const computation = (iterations: number): number => {
 
 if (parentPort) {
   const result = computation(workerData.iterations);
+  
   parentPort.postMessage(result);
 }
